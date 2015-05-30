@@ -1,0 +1,21 @@
+
+@mixin hackIE7 {
+     *:first-child + html & {
+          @content;
+     }
+}
+
+.item {
+     .image {
+          float: left;
+          @include hackIE7 {
+               zoom: 1;
+          }
+     }
+     .text {
+          background: rgba(0,0,0, 0.2);
+          @include hackIE7 {
+               background: #eee;
+          }
+     }
+}
