@@ -7,7 +7,7 @@ var plumber = require('gulp-plumber');
 var sassSrc = '_scss/**/*.scss';
 
 gulp.task('sass', function(){
-  gulp.src('_scss/*.scss')
+  gulp.src(sassSrc)
     .pipe(plumber())
     .pipe(sass({
       style      : 'expanded'
@@ -17,6 +17,6 @@ gulp.task('sass', function(){
 
 gulp.task('watch', function(){
 	// ファイルを監視して、sass タスクを実行
-	gulp.watch('_scss/*.scss', ['sass']);
+	gulp.watch(sassSrc, ['sass']);
 });
 
