@@ -1,5 +1,5 @@
 var gulp      = require('gulp');
-var sass      = require('gulp-ruby-sass');
+var sass      = require('gulp-sass');
 
 // watch の解除をしない命令文
 var plumber = require('gulp-plumber');
@@ -8,7 +8,6 @@ gulp.task('sass', function(){
   gulp.src('_scss/*.scss')
     .pipe(plumber())
     .pipe(sass({
-      bundleExec : true,
       style      : 'expanded'
      }))
     .pipe(gulp.dest('css'))
