@@ -4,6 +4,8 @@ var sass      = require('gulp-sass');
 // watch の解除をしない命令文
 var plumber = require('gulp-plumber');
 
+var sassSrc = '_scss/**/*.scss';
+
 gulp.task('sass', function(){
   gulp.src('_scss/*.scss')
     .pipe(plumber())
