@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-plumber": "^0.6.6",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.1"
   },
   "repository": {
