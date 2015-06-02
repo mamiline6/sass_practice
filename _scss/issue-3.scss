@@ -1,0 +1,8 @@
+$iconnamelist: (a b c);
+
+@each $item in $iconnamelist {
+     .icon-#{$item} {
+          display: inline-block;
+          background: url("img/icon-#{$item}.png") no-repeat top left;
+     }
+}
