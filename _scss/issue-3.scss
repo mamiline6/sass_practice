@@ -1,8 +1,24 @@
-$iconnamelist: (a b c);
+@mixin iconBase {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
 
-@each $item in $iconnamelist {
-     .icon-#{$item} {
-          display: inline-block;
-          background: url("img/icon-#{$item}.png") no-repeat top left;
-     }
+.icon-a {
+  width: 10px;
+  height: 22px;
+  background-image: url("img/icon-a.png");
+  @include iconBase;
+}
+.icon-b {
+  width: 12px;
+  height: 16px;
+  background-image: url("img/icon-b.png");
+  @include iconBase;
+}
+.icon-c {
+  width: 22px;
+  height: 24px;
+  background-image: url("img/icon-c.png");
+  @include iconBase;
 }
