@@ -1,24 +1,20 @@
-@mixin iconBase {
+@mixin iconBase ($icon-name) {
   display: inline-block;
-  background-repeat: no-repeat;
-  background-position: top left;
+  background: url("img/#{$icon-name}.png") top left no-repeat;
 }
 
 .icon-a {
   width: 10px;
   height: 22px;
-  background-image: url("img/icon-a.png");
-  @include iconBase;
+  @include iconBase(icon-a);
 }
 .icon-b {
   width: 12px;
   height: 16px;
-  background-image: url("img/icon-b.png");
-  @include iconBase;
+  @include iconBase(icon-b);
 }
 .icon-c {
   width: 22px;
   height: 24px;
-  background-image: url("img/icon-c.png");
-  @include iconBase;
+  @include iconBase(icon-c);
 }
