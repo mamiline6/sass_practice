@@ -1,0 +1,17 @@
+$basefont: 10; // 基本フォントサイズ
+
+@function rem($size) {
+  @return $size/$basefont;
+}
+
+@mixin rem($size) {
+  font-size: rem($size);
+  font-size: $size;
+}
+
+.block {
+  @include rem(16px);
+}
+.block2 {
+  @include rem(10px);
+}
