@@ -1,7 +1,14 @@
-$basefont: 10; // 基本フォントサイズ
+$basefont: 10;  // 基本フォントサイズの設定
+$px: ();        // 単位用変数
+$integer: ();   // 数値用変数
 
+// pxをremにする関数
 @function rem($size) {
-  @return $size/$basefont;
+  $px: unit($size);                             // 単位を取り出す => px
+  @if $px == px {                               // 単位が px の場合
+    $integer: $size / ($size * 0 + 1);          // 数値に変換（パクリ）
+    @return $integer/$basefont + rem;           // 単位remをつける
+  }
 }
 
 @mixin rem($size) {
