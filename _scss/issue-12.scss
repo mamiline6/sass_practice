@@ -1,0 +1,21 @@
+%btnBase {
+  display: inline-block;
+  min-width: 100px;
+  min-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;  
+}
+.btn-normal{
+  @extend %btnBase;
+  background-color: white;
+}
+.btn-primary {
+ @extend %btnBase;
+  border-color: skyblue;
+  background-color: blue;
+}
+.btn-error {
+ @extend %btnBase; 
+  border-color: tomato;
+  background-color: red;
+}
