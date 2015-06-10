@@ -1,9 +1,11 @@
+$basefont: 10; // 基本フォントサイズ
+
 // pxをremにする関数
 @function rem($size) {
   $px: unit($size);                             // 単位を取り出す => px
   @if $px == px {                               // 単位が px の場合
     $integer: $size / ($size * 0 + 1);          // 数値に変換（参照元あり）
-    @return $integer/10 + rem;                  // 単位remをつける
+    @return $integer/$basefont + rem;           // 単位remをつける
   } @else {
     @return $size;
   }
