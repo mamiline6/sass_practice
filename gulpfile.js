@@ -1,5 +1,6 @@
 var gulp      = require('gulp');
 var sass      = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 // watch の解除をしない命令文
 var plumber = require('gulp-plumber');
@@ -12,6 +13,7 @@ gulp.task('sass', function(){
     .pipe(sass({
       style      : 'expanded'
      }))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('css'))
 });
 
