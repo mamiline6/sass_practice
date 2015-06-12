@@ -13,7 +13,7 @@ gulp.task('sass', function(){
     .pipe(sass({
       style      : 'expanded'
      }))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(["last 2 version", "ie 8"]))
     .pipe(gulp.dest('css'))
 });
 
