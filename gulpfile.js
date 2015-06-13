@@ -1,5 +1,6 @@
 var gulp      = require('gulp');
 var sass      = require('gulp-sass');
+var rename = require('gulp-rename');
 var minify = require('gulp-minify-css');
 
 // watch の解除をしない命令文
@@ -13,7 +14,9 @@ gulp.task('sass', function(){
     .pipe(sass({
       style      : 'expanded'
      }))
+    .pipe(gulp.dest('css'))
     .pipe(minify())
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('css'))
 });
 
