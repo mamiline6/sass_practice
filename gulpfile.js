@@ -16,7 +16,9 @@ gulp.task('sass', function(){
      }))
     .pipe(gulp.dest('css'))
     .pipe(minify())
-    .pipe(rename('style.min.css'))
+    .pipe(rename({
+      extname: '.min.css'
+    }))
     .pipe(gulp.dest('css'))
 });
 
