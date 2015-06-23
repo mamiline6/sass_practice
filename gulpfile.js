@@ -25,7 +25,6 @@ gulp.task('sass', function(){
 });
 
 gulp.task('watch', function(){
-	// ファイルを監視して、sass タスクを実行
-	gulp.watch(sassSrc, ['sass']);
+  // ファイルを監視して、sass タスクを実行
+  gulp.watch(sassSrc, ['sass']);
 });
-
