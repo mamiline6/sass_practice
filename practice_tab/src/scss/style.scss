@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import "_common.scss";
+
+// borderの色
+$borderColor: #ccc;
+
+/* ---------------
+  #wrapper
+--------------- */
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* tabBlock */
+.tabs {
+  border-top: 2px solid $borderColor;
+  border-left: 1px solid $borderColor;
+  font-size: 0;
+  &__tab {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 25%;
+    &.is-select a {
+      background-color: #fff;
+    }
+    & a {
+      display: block;
+      padding: 20px 0;
+      font-size: 16px;
+      border-width: 0 1px 0 0;
+      border-style: solid;
+      border-color: $borderColor;
+      background: #ddd;
+    }
+    & a:hover {
+      text-decoration: none;
+      background: #eee;
+      transition: 0.2s;
+    }
+  }
+}
+
+.tabContents {
+  padding: 40px;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: $borderColor;
+  & h2 {
+    font-size: 20px;
+    text-align: left;
+  }
+  & p {
+    font-size: 16px;
+    text-align: left;
+  }
+  &.is-hidden {
+  display: none; /* js */
+  }
+}
