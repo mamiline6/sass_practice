@@ -2,7 +2,7 @@
 css/
 
 # scss/ ディレクトリのすべてのファイルを無視します
-/scss/
+scss/
 
 # node_modules/ ディレクトリのすべてのファイルを無視します
 node_modules/
