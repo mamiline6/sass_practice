@@ -4,7 +4,7 @@ var sass         = require('gulp-sass');
 var rename       = require('gulp-rename');
 var minify       = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
-var plumber      = require('gulp-plumber');　// watch の解除をしない命令文
+var plumber      = require('gulp-plumber'); // watch の解除をしない命令文
 
 /* ====================
     scss basic 
