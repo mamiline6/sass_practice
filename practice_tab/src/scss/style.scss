@@ -37,7 +37,7 @@ $borderColor: #ccc;
 		&:hover {
 			text-decoration: none;
 			background-color: #eee;
-			transition: 0.2s;
+			transition: 0.2s all linear;
 		}
 	}
 }
