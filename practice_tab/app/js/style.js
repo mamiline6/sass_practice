@@ -1,6 +1,6 @@
 $(function() {
 	// tab
-	var tabLink = $("#tabTopBlock .tabs__tab .tabs__link")
+	var tabLink = $("#tabTopBlock .tabs__tab .tabs__link");
 	var tabCnt = $("#tabTopBlock .tabContents");
 	var tabItem = $("#tabTopBlock .tabs__tab");
 
