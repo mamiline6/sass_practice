@@ -6,7 +6,6 @@ $(function() {
 
 	$(tabLink).click(function() {
 		var num = tabLink.index(this);
-		console.log(tabCnt);
 		tabCnt.addClass("is-hidden");
 		tabCnt.eq(num).removeClass("is-hidden");
 		tabItem.removeClass("is-selected");
