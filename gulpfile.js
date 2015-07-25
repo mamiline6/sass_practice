@@ -57,3 +57,8 @@ gulp.task('sasstab', function(){
 		}))
 		.pipe(gulp.dest(cssTabSrc))
 });
+
+// ファイルを監視して、sass タスクを実行
+gulp.task('watch', function(){
+	gulp.watch(sassTabSrc, ['sasstab']);
+});
