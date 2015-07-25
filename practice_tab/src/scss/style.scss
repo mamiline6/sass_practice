@@ -6,6 +6,12 @@
 // borderの色
 $borderColor: #ccc;
 
+// tab選択前
+$tabBgBaseColor: #eee;
+
+// tab選択後
+$tabBgActiveColor: #fff;
+
 /* tabBlock */
 .tabs {
 	display: table;
@@ -24,7 +30,7 @@ $borderColor: #ccc;
 		}
 	}
 	& .is-selected .tabs__link {
-		background-color: #fff;
+		background-color: $tabBgActiveColor;
 	}
 	&__link {
 		display: block;
@@ -33,10 +39,10 @@ $borderColor: #ccc;
 		border-width: 0 1px 0 0;
 		border-style: solid;
 		border-color: $borderColor;
-		background-color: #ddd;
+		background-color: $tabBgBaseColor;
 		&:hover {
 			text-decoration: none;
-			background-color: #eee;
+			background-color: $tabBgActiveColor;
 			transition: 0.2s all linear;
 		}
 	}
