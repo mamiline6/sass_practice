@@ -1,10 +1,15 @@
 $(function() {
 	// tab
-	$(".tabBlock .tabs__tab a").click(function() {
-		var num = $(".tabBlock .tabs__tab a").index(this);
-		$(".tabContents").addClass('is-hidden');
-		$(".tabContents").eq(num).removeClass('is-hidden');
-		$(".tabBlock .tabs__tab").removeClass('is-select');
-		$(".tabBlock .tabs__tab").eq(num).addClass('is-select');
+	var tabLink = $("#tabTopBlock .tabs__tab .tabs__link")
+	var tabCnt = $("#tabTopBlock .tabContents");
+	var tabItem = $("#tabTopBlock .tabs__tab");
+
+	$(tabLink).click(function() {
+		var num = tabLink.index(this);
+		console.log(tabCnt);
+		tabCnt.addClass("is-hidden");
+		tabCnt.eq(num).removeClass("is-hidden");
+		tabItem.removeClass("is-selected");
+		tabItem.eq(num).addClass("is-selected");
 	});
 });
