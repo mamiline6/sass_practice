@@ -1,36 +1,31 @@
 @charset "UTF-8";
-
 @import "reset";
 @import "common";
 
-// borderの色
-$borderColor: #ccc;
+/* tab */
+.tab {
+	$_border-color: #ccc;
+	$_bg-color: #eee;
+	$_bg-color--is-selected: #fff;
 
-// tab選択前
-$tabBgBaseColor: #eee;
-
-// tab選択後
-$tabBgActiveColor: #fff;
-
-/* tabBlock */
-.tabs {
 	display: table;
 	width: 100%;
 	border-width: 2px 0 0 0;
 	border-style: solid;
-	border-color: $borderColor;
-	&__tab {
+	border-color: $_border-color;
+	&__nav {
 		display: table-cell;
 		width: 25%;
 		text-align: center;
+		background-color: $_bg-color;
 		&:first-child {
 			border-width: 0 0 0 1px;
 			border-style: solid;
-			border-color: $borderColor;
+			border-color: $_border-color;
 		}
-	}
-	& .is-selected .tabs__link {
-		background-color: $tabBgActiveColor;
+		&.is-selected {
+			background-color: $_bg-color--is-selected;
+		}
 	}
 	&__link {
 		display: block;
@@ -38,22 +33,21 @@ $tabBgActiveColor: #fff;
 		font-size: 16px;
 		border-width: 0 1px 0 0;
 		border-style: solid;
-		border-color: $borderColor;
-		background-color: $tabBgBaseColor;
+		border-color: $_border-color;
 		&:hover {
 			text-decoration: none;
-			background-color: $tabBgActiveColor;
+			background-color: $_bg-color--is-selected;
 			transition: 0.2s all linear;
 		}
 	}
-}
-
-.tabContents {
-	padding: 40px;
-	border-width: 0 1px 1px 1px;
-	border-style: solid;
-	border-color: $borderColor;
-	&.is-hidden {
+	&__content {
 		display: none; /* js */
+		padding: 40px;
+		border-width: 0 1px 1px 1px;
+		border-style: solid;
+		border-color: $_border-color;
+		&.is-selected {
+			display: block;
+		}
 	}
 }
