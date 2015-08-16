@@ -2,31 +2,34 @@
 <html lang="jp">
 <head>
 	<meta charset="UTF-8">
-	<title>テンプレート site2015を sass で書いてみる</title>
-	<link rel="stylesheet" href="/css/style.css">
+	<title>テンプレートsite2015をsassで書いてみる</title>
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header id="header">
-<h1 class="siteName"><a href="#">a-blog を sass で書いてみる</a></h1>
-
-<p class="trg"><a href="#">メニュー</a></p>
-<nav class="globalnav">
-	<ul class="menu">
-		<li class="menu_item"><a href="#" class="menu_link">ページ1</a></li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ2</a>
-			<ul class="menu_innermenu">
-				<li class="innermenu_item"><a href="#" class="menu_link">サブページ1</a></li>
-				<li class="innermenu_item"><a href="#" class="menu_link">サブページ2</a></li>
-				<li class="innermenu_item"><a href="#" class="menu_link">サブページ3</a></li>
+<div class="wrapper">
+	<header class="header">
+	<h1 class="header_logo"><a href="#">a-blogをsassで書いてみる</a></h1>
+	<div class="inner">
+		<p class="trg"><a href="#">メニュー</a></p>
+		<nav class="globalnav">
+			<ul class="menu">
+				<li class="menu_item"><a href="#" class="menu_link">ページ1</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ2</a>
+					<ul class="innermenu">
+						<li class="innermenu_item"><a href="#" class="innermenu_link">サブページ1</a></li>
+						<li class="innermenu_item"><a href="#" class="innermenu_link">サブページ2</a></li>
+						<li class="innermenu_item"><a href="#" class="innermenu_link">サブページ3</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ3</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ4</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ5</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ6</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ページ7</a></li>
 			</ul>
-		</li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ3</a></li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ4</a></li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ5</a></li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ6</a></li>
-		<li class="menu_item"><a href="#" class="menu_link">ページ7</a></li>
-	</ul>
-</nav>
-</header>
+		</nav>
+	<!-- /.inner --></div>
+	</header>
+<!-- /.wrapper --></div>
 </body>
 </html>
