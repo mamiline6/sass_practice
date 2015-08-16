@@ -101,13 +101,12 @@ gulp.task('browserSync', function () {
 			baseDir: rootSrc // ルートとなるディレクトリを指定
 		}
 	});
+	browserSync.reload();   // ファイルに変更があれば同期しているブラウザをリロード
 });
 
 // ファイルを監視して、タスクを実行
 gulp.task('default', function(){
 	gulp.watch(sassSrc, ['sassAcms']);
-	// srcフォルダ以下のファイルを監視
-	gulp.watch(devSrc, function() {
-		browserSync.reload();   // ファイルに変更があれば同期しているブラウザをリロード
-	});
+	// フォルダ以下のファイルを監視
+	gulp.watch(devSrc, ['browserSync']);
 });
